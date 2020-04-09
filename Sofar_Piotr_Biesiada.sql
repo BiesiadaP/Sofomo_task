@@ -1,15 +1,4 @@
---/****** Script for SelectTopNRows command from SSMS  ******/
---SELECT TOP (1000) [dimension_1]
---      ,[correct_dimension_2]
---  FROM [brytlyt].[dbo].[MAP]
-
---  insert into A (dimension_1, dimension_2, dimension_3, measure_1)
---  values ('c', 'J', 'N', 5)
-
-
-
-
- ; with dane as( select A.dimension_1 as AD1,  map1.correct_dimension_2 as map1CD2, ISNULL(A.measure_1,0) as AM1, ISNULL(B.measure_2,0) as BM2,  B.dimension_1 as BD1, map2.correct_dimension_2 as map2CD2
+ with dane as( select A.dimension_1 as AD1,  map1.correct_dimension_2 as map1CD2, ISNULL(A.measure_1,0) as AM1, ISNULL(B.measure_2,0) as BM2,  B.dimension_1 as BD1, map2.correct_dimension_2 as map2CD2
   from A
 
 join MAP map1 ON map1.dimension_1 = A.dimension_1
